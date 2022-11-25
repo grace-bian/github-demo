@@ -1,0 +1,139 @@
+.tickets-wide-wrapper{
+	background-color: #3D3B42;
+	padding: 150px 0;
+	.container{
+		position: relative;
+	}
+	.tickets-wide__nav{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+		position: relative;
+		&:before,
+		&:after{
+			content: '';
+			position: absolute;
+			top:0;
+			width: 40%;
+			height: 30px;
+			z-index: 2;
+		}
+		&:before{
+			left: -20px;
+			background: linear-gradient(to left,rgba(60,59,65,0),#3c3b41 180px);
+		}
+		&:after{
+			right: -20px;
+			background: linear-gradient(to right,rgba(60,59,65,0),#3c3b41 180px);
+		}
+	}
+	.tickets-wide__navleft,
+	.tickets-wide__navright{
+		position: absolute;
+		color: #9e9ea0;
+		font-size: 24px;
+		z-index: 3;
+		top: -2px;
+		transition: color 0.2s linear;
+		&:hover{
+			color: $default_color;
+		}
+	}
+	.tickets-wide__navleft{
+		right: calc(50% + 105px);
+	}
+	.tickets-wide__navright{
+		left: calc(50% + 105px);
+	}
+}
+.tickets-wide__navlink{
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 3;
+	font-size: 18px;
+	line-height: 15px;
+	color: #ffffff;
+	font-weight: 700;
+	transition: color 0.2s ease-in-out;
+	.tt-icon{
+		margin-right: 6px;
+		color: $default_color;
+		position: relative;
+		top: 2px;
+	}
+	&:hover{
+		color: $default_color;
+	}
+}
+.js-tickets-wide{
+	position: relative;
+	z-index: 1;
+	.tickets-wide__season{
+		text-align: center;
+		color: #ffffff;
+		font-size: 24px;
+		line-height: 20px;
+		font-weight: bold;
+		padding-bottom: 29px;
+	}
+}
+.tickets-wide{
+	&:not(:first-child){
+		margin-top: 20px;
+	}
+}
+
+
+.tickets-col__nav{
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	position: relative;
+	&:before,
+	&:after{
+		content: '';
+		position: absolute;
+		top:0;
+		width: 40%;
+		height: 30px;
+		z-index: 2;
+	}
+	&:before{
+		left: -20px;
+		background: linear-gradient(to left,rgba(255,255,255,0),#ffffff 180px);
+	}
+	&:after{
+		right: -20px;
+		background: linear-gradient(to right,rgba(255,255,255,0),#ffffff 180px);
+	}
+	.tickets-wide__navleft,
+	.tickets-wide__navright{
+		position: absolute;
+		color: #9e9ea0;
+		font-size: 24px;
+		z-index: 3;
+		top: -2px;
+		transition: color 0.2s linear;
+		&:hover{
+			color: $default_color;
+		}
+	}
+	.tickets-wide__navleft{
+		right: calc(50% + 105px);
+	}
+	.tickets-wide__navright{
+		left: calc(50% + 105px);
+	}
+	.tickets-wide__navlink{
+		color: #3D3B42;
+	}
+}
+

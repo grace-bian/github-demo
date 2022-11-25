@@ -1,0 +1,114 @@
+/*
+	Gallery page - Filter Tabs
+*/
+#filter-nav{
+	position: relative;
+	ul{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+		margin-top: -10px;
+		padding:0 0 63px 0;
+		li{
+			> a{
+				color: #3D3B42;
+				font-size: 19px;
+				line-height: 16px;
+				font-weight: bold;
+				display: inline-block;
+				padding: 10px 18px;
+				&:hover{
+					color: #3D3B42;
+				}
+			}
+		}
+	}
+	@media (min-width: 791px){
+		ul{
+			li{
+				&:before,
+				&:after{
+					content: '';
+					width: 30px;
+					height: 1px;
+					background-color: #d8d8da;
+					display: inline-block;
+					position: relative;
+					top: -6px;
+				}
+				&:first-child{
+					&:before{
+						display: none;
+					}
+				}
+				&:last-child{
+					&:after{
+						display: none;
+					}
+				}
+			}
+		}
+	}
+	@media (max-width: 790px){
+		ul{
+			li{
+				> a{
+					font-size: 18px;
+					padding-left: 13px;
+					padding-right: 13px;
+				}
+				&:before,
+				&:after{
+					width: 20px;
+				}
+			}
+		}
+	}
+	@media (max-width: 575px){
+		ul{
+			padding-bottom: 25px;
+			li{
+				> a{
+					font-size: 16px;
+					padding-left: 13px;
+					padding-right: 13px;
+				}
+				&:before,
+				&:after{
+					width: 20px;
+				}
+			}
+		}
+	}
+}
+#tt-filternav__line{
+	display: block;
+	position: absolute;
+	height: 4px;
+	width: 50px;
+	top: 29px;
+	left: 22px;
+	width: 41px;
+	background: linear-gradient(270deg, #FF1A43 -0.23%, #7B16D9 100%);
+	border-radius: 10px;
+	opacity: 1;
+	transition: width .3s linear, left .3s linear, opacity .7s ease-in-out;
+	margin-top: 15px;
+	opacity: 0;
+	@media (max-width: 790px){
+		height: 3px;
+	}
+}
+#filter-layout{
+	> *:not(.show){
+		display: none;
+	}
+}
+
+#js-more-include{
+	padding: 0;
+	display: block !important;
+}

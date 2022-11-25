@@ -1,0 +1,153 @@
+.slick-dots01{
+	.slick-dots{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+		margin: 9px 0 -8px 0;
+		li{
+			padding: 8px;
+			> *{
+				width: 8px;
+				max-width: 8px;
+				height: 8px;
+				display: block;
+				background-color:#C4C4C4;
+				border-radius: 50%;
+				font-size: 0;
+				line-height: 0;
+				box-shadow: none;
+				outline: none;
+				border: none;
+				padding: 0;
+				transition: background-color .2s;
+			}
+			&:not(.slick-active){
+				cursor:pointer;
+				> *{
+					cursor:pointer;
+				}
+			}
+			&.slick-active,
+			&:hover{
+				> *{
+					background-color:$default_color;
+				}
+			}
+		}
+	}
+	@media (max-width: 1024px){
+		.slick-dots{
+			li{
+				padding: 8px 9px;
+				> *{
+					width: 6px;
+					max-width: 6px;
+					height: 6px;
+				}
+			}
+		}
+	}
+	@media (max-width: 575px){
+		.slick-dots{
+			margin-top: 0;
+		}
+	}
+}
+.slick-slide{
+	height: auto;
+}
+.slick-slider{
+	.slick-slide{
+		outline: none;
+	}
+}
+.js-slick01,
+.js-slick02,
+.js-slick03,
+.js-slick04{
+	opacity: 0;
+}
+.loaded{
+	.js-slick01,
+	.js-slick02,
+	.js-slick03,
+	.js-slick04{
+		opacity: 1;
+	}
+}
+
+
+.slick-arrows01{
+	.slick-arrow{
+		position: absolute;
+		top: 50%;
+	}
+	.slick-prev{
+		left: 0;
+	}
+	.slick-next{
+		right: 0;
+	}
+}
+
+.slick-dots02{
+	.slick-dots{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+		margin: 28px 0 -8px 0;
+		li{
+			padding: 8px;
+			> *{
+				width: 8px;
+				max-width: 8px;
+				height: 8px;
+				display: block;
+				background-color:#C4C4C4;
+				border-radius: 50%;
+				font-size: 0;
+				line-height: 0;
+				box-shadow: none;
+				outline: none;
+				border: none;
+				padding: 0;
+				transition: background-color .2s;
+			}
+			&:not(.slick-active){
+				cursor:pointer;
+				> *{
+					cursor:pointer;
+				}
+			}
+			&.slick-active,
+			&:hover{
+				> *{
+					background-color:$default_color;
+				}
+			}
+		}
+	}
+	@media (max-width: 1024px){
+		.slick-dots{
+			li{
+				padding: 8px 9px;
+				> *{
+					width: 6px;
+					max-width: 6px;
+					height: 6px;
+				}
+			}
+		}
+	}
+	@media (max-width: 575px){
+		.slick-dots{
+			margin-top: 28px;
+		}
+	}
+}

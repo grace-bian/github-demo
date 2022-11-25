@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+@@include('includes/head.html')
+</head>
+<body>
+@@include('includes/header/header-01.html')
+<div id="subtitle-wrapper">
+	<div class="subtitle__img"></div>
+	<h1 class="subtitle__title">Our Gallery</h1>
+	<div class="subtitle__label">Home &nbsp;-&nbsp; Our Gallery</div>
+</div>
+<main id="tt-pageContent">
+	<div class="subpages-inner section-marker">
+		<div class="container-fluid">
+			<div id="filter-nav">
+				<ul>
+					<li class="active"><a class="gallery-navitem" href="all"><span>Show All</span></a></li>
+					<li><a class="gallery-navitem" href="photos"><span>#Photos</span></a></li>
+					<li><a class="gallery-navitem" href="videos"><span>#Videos</span></a></li>
+				</ul>
+				<div id="tt-filternav__line"></div>
+			</div>
+			<div id="filter-layout" class="row no-gutters gallery-externallayout-wrapper">
+				<!-- photos -->
+				<div class="col-sm-6 col-lg-4 photos show all">
+					<a href="gallery-detail.html" class="gallery-externallayout">
+						<div class="gallery__img"><img src="images/gallery/gallery02-01.jpg" alt=""></div>
+						<div class="gallery__time">friday, dec 7, 2020</div>
+						<div class="gallery__title">E-Rock</div>
+					</a>
+				</div>
+				<div class="col-sm-6 col-lg-4 photos show all">
+					<a href="gallery-detail.html" class="gallery-externallayout">
+						<div class="gallery__img"><img src="images/gallery/gallery02-02.jpg" alt=""></div>
+						<div class="gallery__time">Saturday, FEB 8, 2020</div>
+						<div class="gallery__title">DJ Quiz</div>
+					</a>
+				</div>
+				<div class="col-sm-6 col-lg-4 photos show all">
+					<a href="gallery-detail.html" class="gallery-externallayout">
+						<div class="gallery__img"><img src="images/gallery/gallery02-03.jpg" alt=""></div>
+						<div class="gallery__time">Wednesday, Dec 12, 2020</div>
+						<div class="gallery__title">Kid Funk</div>
+					</a>
+				</div>
+				<div class="col-sm-6 col-lg-4 photos show all">
+					<a href="gallery-detail.html" class="gallery-externallayout">
+						<div class="gallery__img"><img src="images/gallery/gallery02-04.jpg" alt=""></div>
+						<div class="gallery__time">FRIday, feb 14, 2020</div>
+						<div class="gallery__title">Paul Wall</div>
+					</a>
+				</div>
+				<div class="col-sm-6 col-lg-4 photos show all">
+					<a href="gallery-detail.html" class="gallery-externallayout">
+						<div class="gallery__img"><img src="images/gallery/gallery02-05.jpg" alt=""></div>
+						<div class="gallery__time">Saturday, feb 15, 2020</div>
+						<div class="gallery__title">Eric Bellinger</div>
+					</a>
+				</div>
+				<div class="col-sm-6 col-lg-4 photos show all">
+					<a href="gallery-detail.html" class="gallery-externallayout">
+						<div class="gallery__img"><img src="images/gallery/gallery02-06.jpg" alt=""></div>
+						<div class="gallery__time">Sunday, feb 16, 2020</div>
+						<div class="gallery__title">DJ Murat</div>
+					</a>
+				</div>
+				<div class="col-sm-6 col-lg-4 photos show all">
+					<a href="gallery-detail.html" class="gallery-externallayout">
+						<div class="gallery__img"><img src="images/gallery/gallery02-07.jpg" alt=""></div>
+						<div class="gallery__time">Saturday, mar 7, 2020</div>
+						<div class="gallery__title">Kirko Bangz</div>
+					</a>
+				</div>
+				<div class="col-sm-6 col-lg-4 photos show all">
+					<a href="gallery-detail.html" class="gallery-externallayout">
+						<div class="gallery__img"><img src="images/gallery/gallery02-08.jpg" alt=""></div>
+						<div class="gallery__time">Sunday, feb 8, 2020</div>
+						<div class="gallery__title">Fashen</div>
+					</a>
+				</div>
+				<div class="col-sm-6 col-lg-4 photos show all">
+					<a href="gallery-detail.html" class="gallery-externallayout">
+						<div class="gallery__img"><img src="images/gallery/gallery02-09.jpg" alt=""></div>
+						<div class="gallery__time">Saturday, Jan 25, 2020</div>
+						<div class="gallery__title">DJ Karma</div>
+					</a>
+				</div>
+				<!-- /photos -->
+				<!-- videos -->
+				<div class="col-sm-6 videos show all">
+					<a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="gallery-externallayout js-video-popup">
+						<div class="gallery__img">
+							<img src="images/gallery/gallery02-10.jpg" alt="">
+							<div class="gallery__video"></div>
+						</div>
+						<div class="gallery__time">Saturday, Jan 25, 2020</div>
+						<div class="gallery__title">DJ Karma</div>
+					</a>
+				</div>
+				<div class="col-sm-6 videos show all">
+					<a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="gallery-externallayout js-video-popup">
+						<div class="gallery__img">
+							<img src="images/gallery/gallery02-11.jpg" alt="">
+							<div class="gallery__video"></div>
+						</div>
+						<div class="gallery__time">Saturday, Jan 25, 2020</div>
+						<div class="gallery__title">Stunna 4 Vegas</div>
+					</a>
+				</div>
+				<!-- /videos -->
+				<div class="col-12 text-center" id="js-more-include" data-include="ajax-content/more-gallery-externallayout.php">
+					<a href="#" class="tt-btn-default tt-btn__wide tt-btn__wide-top"><span>more gallery</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+<footer id="tt-footer" class="no-margin">
+	@@include('includes/footer/footer-01.html')
+</footer>
+@@include('includes/include-js.html')
+@@include('includes/include-modal.html')
+@@include('includes/include-backtotop.html')
+<script src="separate-include/gallery/filter_tabs.js"></script>
+</body>
+</html>

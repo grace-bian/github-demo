@@ -1,0 +1,108 @@
+/*****************************************************************
+// Declarative Jenkinsfile for the UAT environment of J3 Club
+******************************************************************/
+pipeline {
+	agent {
+		docker {
+			image 'node:12.13.0'
+		}
+	}
+
+	environment {
+		CI = 'true'
+		JR_ENVIRONMENT = 'UAT'
+		BUCKET_NAME = 's3://uat.j3.club'
+		WORKSPACE_PATH = '/var/jenkins_home/workspace/J3Club_uat'
+		REGION = 'ap-southeast-2'
+	    //DISTRIBUTION_ID=
+		//PATHS_TO_INVALIDATE = '/*'
+	}
+
+	options {
+		// Keep maximum 10 archievd artifacts
+		buildDiscarder(logRotator(numToKeepStr:'10', artifactNumToKeepStr:'10'))
+		// No simultaneous builds
+		disableConcurrentBuilds()
+		durabilityHint('PERFORMANCE_OPTIMIZED') // MAX_SURVIVABILITY or SURVIVABLE_NONATOMIC
+	}
+
+	stages {
+		stage('Install packages') {
+			steps {
+				bitbucketStatusNotify(buildState: 'INPROGRESS')
+				echo "Installing packages ..."
+				// Install the packages from package.json
+				sh 'npm install'
+				sh 'npm install gulp -g'
+			}
+		}
+		stage('Build') {
+			steps {
+				echo "Building ..."
+				echo "Running job: ${env.JOB_NAME}\nBuild: ${env.BUILD_ID} - ${env.BUILD_URL}\nPipeline: ${env.RUN_DISPALY_URL}"
+				sh 'gulp build'
+			}
+		}
+
+		stage('Test') {
+			steps{
+				echo "Testing ..."
+				// sh 'npm run test' // umi test
+			}
+		}
+
+		stage('Install AWS CLI') {
+			steps {
+				echo "Installing AWS CLI ..."
+				// Insall awscli in Jenkins contianer
+				sh 'apt-get update'
+				sh 'apt install python3-pip -y'
+				sh 'pip3 install awscli --upgrade'
+			}
+		}
+		
+		stage('Deploy to UAT') {
+			when {
+				expression {
+					currentBuild.result == null || currentBuild.result == 'SUCCESS'
+				}
+			}
+			steps {
+				deployToS3(JR_ENVIRONMENT)
+			}
+		}
+	}	
+
+	post {
+		success {
+			bitbucketStatusNotify(buildState: 'SUCCESSFUL')
+			echo "well done" 
+			emailext attachLog: false, 
+			body: '${DEFAULT_CONTENT}',  
+			subject: '${PROJECT_NAME} - Build # ${BUILD_NUMBER} - ${BUILD_STATUS}!',
+			to: '${OAP_DEVELOPERS}, cc:${CC_RECIPIENTS}',
+			replyTo: '${DEVOPS_TEAM}'
+		}
+		failure {
+			echo "FAILED"
+			bitbucketStatusNotify(buildState: 'FAILED')
+			emailext attachLog: true,
+			body: '${DEFAULT_CONTENT}',  
+			subject: '${PROJECT_NAME} - Build # ${BUILD_NUMBER} - ${BUILD_STATUS}!',
+			to: '${OAP_DEVELOPERS}, cc:${CC_RECIPIENTS}',
+			replyTo: '${DEVOPS_TEAM}'
+		}
+	}
+}
+
+
+def deployToS3(environment) {
+	echo 'Deploying to ' + environment + ' ...'
+	withVault(configuration: [timeout: 60, vaultCredentialId: 'Vault Credential', vaultUrl: 'https://vault.jiangren.com.au'], vaultSecrets: [[path: 'secret_aws/aws_uat', secretValues: [[vaultKey: 'AWS_ACCESS_KEY_ID'], [vaultKey: 'AWS_SECRET_ACCESS_KEY']]]]) {
+		sh 'aws configure set region ${REGION}'
+		// Empty the UAT bucket
+		sh 'aws s3 rm "${BUCKET_NAME}" --recursive' // ${BUCKET_NAME} is also fine.
+		// Copy the static files from workspace to the S3 bucket created before
+		sh 'aws s3 cp "${WORKSPACE_PATH}" "${BUCKET_NAME}" --recursive --acl public-read'
+	}
+}

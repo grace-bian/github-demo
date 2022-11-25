@@ -1,0 +1,100 @@
+.section-wrapper01{
+	background:#3c3b41 url('../images/promo02.jpg') 0 0 no-repeat;
+	@media (min-width: 1025px){
+		margin-top: -50px;
+	}
+	@media (max-width: 1024px){
+		margin-top: -30px;
+	}
+	overflow: hidden;
+}
+.section-wrapper{
+	background-color: #3D3B42;
+}
+.section-marker{
+	position: relative;
+	&:before{
+		content: '';
+		display: block;
+		background: linear-gradient(270deg, #FF1A43 0%, #7B16D9 100%);
+		position: absolute;
+		top: 0;
+		left: 50%;
+		margin-top: -30px;
+		border-radius: 3px;
+		transform: translateX(-50%);
+		z-index: 2;
+	}
+	&.section-marker__indent01{
+		&:before{
+			margin-top: -49px;
+		}
+	}
+	&.section-marker__indent02{
+		&:before{
+			margin-top: 54px;
+		}
+	}
+	&.section-marker__indent03{
+		&:before{
+			margin-top: -162px;
+		}
+	}
+	&.section-marker__indent04{
+		&:before{
+			margin-top: -168px;
+		}
+	}
+	@media (min-width: 1025px){
+		&:before{
+			width: 4px;
+			height: 63px;
+			margin-left: -2px;
+		}
+	}
+	@media (max-width: 1024px){
+		&:before{
+			width: 3px;
+			height: 46px;
+			margin-top: -23px;
+		}
+		&.section-marker__indent01{
+			&:before{
+				margin-top: -40px;
+			}
+		}
+		&.section-marker__indent02{
+			&:before{
+				margin-top: 62px;
+			}
+		}
+		&.section-marker__indent03{
+			&:before{
+				margin-top: -63px;
+			}
+		}
+		&.section-marker__indent04{
+			&:before{
+				margin-top: -63px;
+			}
+		}
+	}
+	@media (max-width: 790px){
+		&.section-marker__indent01{
+			&:before{
+				margin-top: -72px;
+			}
+		}
+		&.section-marker__indent03{
+			&:before{
+				margin-top: -72px;
+			}
+		}
+		&.section-marker__indent04{
+			&:before{
+				margin-top: -61px;
+			}
+		}
+	}
+
+}

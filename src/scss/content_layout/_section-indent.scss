@@ -1,0 +1,230 @@
+.section-indent01{
+	&:not(.no-margin){
+		@media (min-width: 1025px){
+			margin-top: 36px;
+		}
+		@media (max-width: 1024px){
+			margin-top: -5px;
+		}
+		@media (max-width: 790px){
+			margin-top: -43px;
+		}
+	}
+}
+.section-indent02{
+	&:not(.no-margin){
+		margin-top: 131px;
+		@media (max-width: 1024px){
+			margin-top: 40px;
+			.section-marker:before{
+				margin-top: -4px;
+			}
+		}
+		@media (max-width: 937px){
+			.section-marker:before{
+				margin-top: -14px;
+			}
+		}
+		@media (max-width: 887px){
+			.section-marker:before{
+				margin-top: -3px;
+			}
+		}
+		@media (max-width: 826px){
+			margin-top: 58px;
+			.section-marker:before{
+				margin-top: -23px;
+			}
+		}
+		@media (max-width: 790px){
+			margin-top: 60px;
+		}
+		@media (max-width: 767px){
+			margin-top: 0px;
+			.section-marker:before{
+				margin-top: 27px;
+			}
+		}
+	}
+}
+.section-indent03{
+	&:not(.no-margin){
+		margin-top: 17px;
+		@media (max-width: 790px){
+			margin-top: 49px;
+		}
+	}
+	@media (max-width: 1024px){
+		.section-title{
+			.section-title__text{
+				padding-top: 38px;
+			}
+			.section-title__text-under{
+				top: -10px;
+			}
+		}
+	}
+}
+.section-indent04{
+	&:not(.no-margin){
+		margin-top: 98px;
+		@media (max-width: 1024px){
+			margin-top: 72px;
+		}
+		@media (max-width: 790px){
+			margin-top: 49px;
+		}
+	}
+}
+.section-indent05{
+	&:not(.no-margin){
+		padding-top: 98px;
+		padding-bottom: 98px;
+		@media (max-width: 1024px){
+			padding-top: 70px;
+			padding-bottom: 70px;
+		}
+		@media (max-width: 790px){
+			padding-top: 29px;
+			padding-bottom: 49px;
+		}
+	}
+}
+.section-indent06{
+	&:not(.no-margin){
+		margin-top: 136px;
+		@media (max-width: 1024px){
+			margin-top: 40px;
+			.section-marker:before{
+				margin-top: -4px;
+			}
+		}
+		@media (max-width: 937px){
+			.section-marker:before{
+				margin-top: -14px;
+			}
+		}
+		@media (max-width: 887px){
+			.section-marker:before{
+				margin-top: -3px;
+			}
+		}
+		@media (max-width: 826px){
+			.section-marker:before{
+				margin-top: -23px;
+			}
+		}
+		@media (max-width: 790px){
+			margin-top: 40px;
+		}
+		@media (max-width: 767px){
+			.section-marker:before{
+				margin-top: 40px;
+			}
+		}
+	}
+}
+
+.section-inner{
+	padding-top: 36px;
+	padding-bottom: 122px;
+	position: relative;
+	z-index: 2;
+	@media (max-width: 1024px){
+		padding-top: 0px;
+		padding-bottom: 60px;
+	}
+	@media (max-width: 790px){
+		padding-bottom: 49px;
+	}
+}
+.section-wrapper02{
+	background: #ffffff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	@media (min-width: 1700px){
+		width: calc(100% - 163px);
+	}
+	@media (max-width: 1699px){
+		width: calc(100% - 100px);
+	}
+	@media (max-width: 1600px){
+		width: calc(100% - 70px);
+	}
+	@media (max-width: 1500px){
+		width: calc(100% - 50px);
+	}
+	@media (max-width: 1450px){
+		width: 100%;
+	}
+}
+.section-indent-minus01{
+	margin-top: -85px;
+	position: relative;
+	z-index: 1;
+}
+
+.container-fluid-tablet{
+	@media (max-width: 1024px){
+		max-width: inherit;
+		margin-left: 0;
+		margin-right: 0;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	@media (max-width: 575px){
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+.container-fluid-lg{
+	@media (max-width: 1239px){
+		max-width: inherit;
+		margin-left: 0;
+		margin-right: 0;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	@media (max-width: 575px){
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+.container-fluid-subpages{
+	@media (min-width: 1240px){
+		padding-left: 70px;
+		padding-right: 70px;
+	}
+	@media (max-width: 1239px){
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	@media (max-width: 1024px){
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+
+/* news item */
+.subpages-indent{
+	padding-top: 120px;
+}
+.subpages-inner{
+	padding-top: 120px;
+	padding-bottom: 120px;
+	@media (max-width: 1239px){
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+	@media (max-width: 1024px){
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+	@media (max-width: 575px){
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+}

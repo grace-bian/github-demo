@@ -1,0 +1,122 @@
+.events-parties{
+	.tt-item{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-content: stretch;
+		align-items: stretch;
+		padding: 50px 0;
+		position: relative;
+		&:not(:first-child){
+			margin-top: 50px;
+		}
+		.tt-item__img{
+			width: 61%;
+			background-size: cover;
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			height: 100%;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position:  0 0;
+			@media (max-width: 766px){
+				height:400px;
+				width: 100%;
+				background-position: center 0;
+			}
+			@media (max-width: 575px){
+				height:244px;
+			}
+		}
+		.tt-item__content{
+			background: #ffffff;
+			box-shadow: 0px 4px 124px rgba(0, 0, 0, 0.25);
+			width: 53.9%;
+			position: relative;
+			z-index: 2;
+			padding: 85px 95px 89px 90px;
+		}
+		.tt-content-text{
+			max-width: 571px;
+			position: relative;
+			z-index: 3;
+		}
+		.tt-btn-row{
+			margin-top: 42px;
+			@media (min-width: 1025px){
+				[class^="tt-btn"]{
+					span{
+						padding-left: 42px;
+						padding-right: 42px;
+					}
+				}
+			}
+		}
+		&:nth-child(odd){
+			justify-content: flex-end;
+			.tt-item__img{
+				left: 0;
+			}
+			.tt-item__content{
+
+			}
+		}
+		&:nth-child(even){
+			justify-content: flex-start;
+			.tt-item__img{
+				right: 0;
+			}
+			.tt-item__content{
+				background: #3D3B42;
+				color: #D3D3D5;
+				@media (min-width: 768px){
+					.tt-item__content-wrapper{
+						float: right;
+					}
+				}
+			}
+			.blocktitle{
+				.tt-title{
+					color: #ffffff;
+				}
+			}
+		}
+		@media (max-width: 1239px){
+			.tt-item__content{
+				padding: 65px 60px 69px 50px;
+			}
+		}
+
+		@media (max-width: 1024px){
+
+		}
+		@media (max-width: 767px){
+			flex-wrap: wrap;
+			padding: 0;
+			&:not(:first-child){
+				margin-top: 50px;
+			}
+			.tt-item__img{
+				width: 100%;
+				position: relative;
+			}
+			.tt-item__content{
+				position: relative;
+				width: 100%;
+				padding: 34px 30px 56px;
+			}
+			.tt-btn-row{
+				margin-top: 32px;
+			}
+		}
+		@media (max-width: 575px){
+			&:not(:first-child){
+				margin-top: 30px;
+			}
+			.tt-item__content{
+				padding: 34px 20px 46px;
+			}
+		}
+	}
+}

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+@@include('includes/head.html')
+</head>
+<body>
+@@include('includes/header/header-01.html')
+<div id="subtitle-wrapper">
+	<div class="subtitle__img"></div>
+	<h1 class="subtitle__title">Events</h1>
+	<div class="subtitle__label">Home &nbsp;-&nbsp; Events</div>
+</div>
+<main id="tt-pageContent">
+	<div class="subpages-inner section-marker">
+		<div class="container container-fluid-lg">
+			<div class="ttcalendar__nav">
+				<a href="#" class="ttcalendar__navleft icon-arrow_left"></a>
+				<a href="#" class="ttcalendar__navright icon-arrow_right"></a>
+				<a href="events.html" class="ttcalendar__navlink">
+					<span class="tt-icon">
+						<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M9.34374 7.1875C9.68891 7.1875 9.96873 6.90768 9.96873 6.5625C9.96873 6.21732 9.68891 5.9375 9.34374 5.9375C8.99856 5.9375 8.71874 6.21732 8.71874 6.5625C8.71874 6.90768 8.99856 7.1875 9.34374 7.1875Z" fill="currentColor"/>
+							<path d="M9.34374 9.90625C9.68891 9.90625 9.96873 9.62643 9.96873 9.28125C9.96873 8.93607 9.68891 8.65625 9.34374 8.65625C8.99856 8.65625 8.71874 8.93607 8.71874 9.28125C8.71874 9.62643 8.99856 9.90625 9.34374 9.90625Z" fill="currentColor"/>
+							<path d="M12.0625 7.1875C12.4077 7.1875 12.6875 6.90768 12.6875 6.5625C12.6875 6.21732 12.4077 5.9375 12.0625 5.9375C11.7173 5.9375 11.4375 6.21732 11.4375 6.5625C11.4375 6.90768 11.7173 7.1875 12.0625 7.1875Z" fill="currentColor"/>
+							<path d="M15.375 7.8125C15.7202 7.8125 16 7.53269 16 7.1875V3.75C16 2.3715 14.8785 1.25 13.5 1.25H12.6875V0.625C12.6875 0.279813 12.4077 0 12.0625 0C11.7173 0 11.4375 0.279813 11.4375 0.625V1.25H8.59374V0.625C8.59374 0.279813 8.31392 0 7.96874 0C7.62355 0 7.34374 0.279813 7.34374 0.625V1.25H4.53124V0.625C4.53124 0.279813 4.25143 0 3.90624 0C3.56106 0 3.28124 0.279813 3.28124 0.625V1.25H2.5C1.1215 1.25 0 2.3715 0 3.75V13.5C0 14.8785 1.1215 16 2.5 16H10.375C10.3963 16 10.4173 15.9989 10.438 15.9968C10.4586 15.9988 10.4792 16 10.4998 16C10.6665 16 10.83 15.9333 10.9502 15.8085L15.8252 10.746C15.999 10.5655 16.0482 10.2985 15.9501 10.0679C15.852 9.83725 15.6256 9.6875 15.375 9.6875H12.375C10.9965 9.6875 9.87498 10.809 9.87498 12.1875V14.75H2.5C1.81075 14.75 1.25 14.1892 1.25 13.5V3.75C1.25 3.06075 1.81075 2.5 2.5 2.5H3.28124V3.125C3.28124 3.47019 3.56106 3.75 3.90624 3.75C4.25143 3.75 4.53124 3.47019 4.53124 3.125V2.5H7.34374V3.125C7.34374 3.47019 7.62355 3.75 7.96874 3.75C8.31392 3.75 8.59374 3.47019 8.59374 3.125V2.5H11.4375V3.125C11.4375 3.47019 11.7173 3.75 12.0625 3.75C12.4077 3.75 12.6875 3.47019 12.6875 3.125V2.5H13.5C14.1892 2.5 14.75 3.06075 14.75 3.75V7.1875C14.75 7.53269 15.0298 7.8125 15.375 7.8125ZM11.125 12.1875C11.125 11.4983 11.6857 10.9375 12.375 10.9375H13.9054L11.125 13.8249V12.1875Z" fill="currentColor"/>
+							<path d="M3.90624 7.1875C4.25142 7.1875 4.53124 6.90768 4.53124 6.5625C4.53124 6.21732 4.25142 5.9375 3.90624 5.9375C3.56107 5.9375 3.28124 6.21732 3.28124 6.5625C3.28124 6.90768 3.56107 7.1875 3.90624 7.1875Z" fill="currentColor"/>
+							<path d="M6.62499 9.90625C6.97017 9.90625 7.24999 9.62643 7.24999 9.28125C7.24999 8.93607 6.97017 8.65625 6.62499 8.65625C6.27981 8.65625 5.99999 8.93607 5.99999 9.28125C5.99999 9.62643 6.27981 9.90625 6.62499 9.90625Z" fill="currentColor"/>
+							<path d="M3.90624 12.625C4.25142 12.625 4.53124 12.3452 4.53124 12C4.53124 11.6548 4.25142 11.375 3.90624 11.375C3.56107 11.375 3.28124 11.6548 3.28124 12C3.28124 12.3452 3.56107 12.625 3.90624 12.625Z" fill="currentColor"/>
+							<path d="M3.90624 9.90625C4.25142 9.90625 4.53124 9.62643 4.53124 9.28125C4.53124 8.93607 4.25142 8.65625 3.90624 8.65625C3.56107 8.65625 3.28124 8.93607 3.28124 9.28125C3.28124 9.62643 3.56107 9.90625 3.90624 9.90625Z" fill="currentColor"/>
+							<path d="M6.62499 12.625C6.97017 12.625 7.24999 12.3452 7.24999 12C7.24999 11.6548 6.97017 11.375 6.62499 11.375C6.27981 11.375 5.99999 11.6548 5.99999 12C5.99999 12.3452 6.27981 12.625 6.62499 12.625Z" fill="currentColor"/>
+							<path d="M6.62499 7.1875C6.97017 7.1875 7.24999 6.90768 7.24999 6.5625C7.24999 6.21732 6.97017 5.9375 6.62499 5.9375C6.27981 5.9375 5.99999 6.21732 5.99999 6.5625C5.99999 6.90768 6.27981 7.1875 6.62499 7.1875Z" fill="currentColor"/>
+						</svg>
+					</span>
+					Event Calendar
+				</a>
+			</div>
+			<div id="js-ttcalendar" class="ttcalendar-layout ttcalendar-layout02">
+				<div class="item">
+					<div class="ttcalendar__month-title">January 2020</div>
+					<div class="row tickets-col-wrapper">
+						<div class="col-sm-6 col-md-4">
+							<div class="tickets-col">
+								<div class="tickets-col__img">
+									<img src="images/tickets/tickets-col-01.jpg" alt="">
+									<div class="tickets-col__label">
+										From
+										<strong>$25</strong>
+									</div>
+									<div class="tickets-col__btn">
+										<a href="#" class="tt-btn" data-toggle="modal" data-target="#modalBayTickets"><span>buy tickets</span></a>
+										<a href="#" class="tt-btn" data-toggle="modal" data-target="#modalVipTables"><span>VIP tables</span></a>
+									</div>
+								</div>
+								<div class="tickets-col__description">
+									<div class="tickets-col__data">Thursday, Jan 23, 2020</div>
+									<h3 class="tickets-col__title">Paradisco.</h3>
+									By Occupy The Disco
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class="tickets-col">
+								<div class="tickets-col__img">
+									<img src="images/tickets/tickets-col-02.jpg" alt="">
+									<div class="tickets-col__label">
+										From
+										<strong>$30</strong>
+									</div>
+									<div class="tickets-col__btn">
+										<a href="#" class="tt-btn" data-toggle="modal" data-target="#modalBayTickets"><span>buy tickets</span></a>
+										<a href="#" class="tt-btn" data-toggle="modal" data-target="#modalVipTables"><span>VIP tables</span></a>
+									</div>
+								</div>
+								<div class="tickets-col__description">
+									<div class="tickets-col__data">Tuesday, Jan 28, 2020</div>
+									<h3 class="tickets-col__title">Gustavo.</h3>
+									Outsource Steve Play
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class="tickets-col">
+								<div class="tickets-col__img">
+									<img src="images/tickets/tickets-col-03.jpg" alt="">
+									<div class="tickets-col__label">
+										From
+										<strong>$15</strong>
+									</div>
+									<div class="tickets-col__btn">
+										<a href="#" class="tt-btn" data-toggle="modal" data-target="#modalBayTickets"><span>buy tickets</span></a>
+										<a href="#" class="tt-btn" data-toggle="modal" data-target="#modalVipTables"><span>VIP tables</span></a>
+									</div>
+								</div>
+								<div class="tickets-col__description">
+									<div class="tickets-col__data">Thursday, Jan 30, 2020</div>
+									<h3 class="tickets-col__title">Friday Night. </h3>
+									Memoirs in Paradise
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class="tickets-col">
+								<div class="tickets-col__img">
+									<img src="images/tickets/tickets-col-04.jpg" alt="">
+									<div class="tickets-col__label">
+										From
+										<strong>$20</strong>
+									</div>
+									<div class="tickets-col__btn">
+										<a href="#" class="tt-btn" data-toggle="modal" data-target="#modalBayTickets"><span>buy tickets</span></a>
+										<a href="#" class="tt-btn" data-toggle="modal" data-target="#modalVipTables"><span>VIP tables</span></a>
+									</div>
+								</div>
+								<div class="tickets-col__description">
+									<div class="tickets-col__data">SUNDAY, Feb 2, 2020</div>
+									<h3 class="tickets-col__title">March Madness.</h3>
+									Travis Gold / Macho Iza
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class="tickets-col">
+								<div class="tickets-col__img">
+									<img src="images/tickets/tickets-col-05.jpg" alt="">
+									<div class="tickets-col__label">
+										From
+										<strong>$15</strong>
+									</div>
+									<div class="tickets-col__btn">
+										<a href="#" class="tt-btn" data-toggle="modal" data-target="#modalBayTickets"><span>buy tickets</span></a>
+										<a href="#" class="tt-btn" data-toggle="modal" data-target="#modalVipTables"><span>VIP tables</span></a>
+									</div>
+								</div>
+								<div class="tickets-col__description">
+									<div class="tickets-col__data">Wednesday, FEB 5, 2020</div>
+									<h3 class="tickets-col__title">Warm Up.</h3>
+									Get The Party Started
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class="tickets-col">
+								<div class="tickets-col__img">
+									<img src="images/tickets/tickets-col-06.jpg" alt="">
+									<div class="tickets-col__label">
+										From
+										<strong>$25</strong>
+									</div>
+									<div class="tickets-col__btn">
+										<a href="#" class="tt-btn" data-toggle="modal" data-target="#modalBayTickets"><span>buy tickets</span></a>
+										<a href="#" class="tt-btn" data-toggle="modal" data-target="#modalVipTables"><span>VIP tables</span></a>
+									</div>
+								</div>
+								<div class="tickets-col__description">
+									<div class="tickets-col__data">Wednesday, FEB 5, 2020</div>
+									<h3 class="tickets-col__title">Let’s Make Love</h3>
+									Desert Hearts presents
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="ttcalendar__month-title">February 2020</div>
+					<div class="row tickets-col-wrapper">
+						<div class="col-sm-6 col-md-4">
+							<div class="tickets-col">
+								<div class="tickets-col__img">
+									<img src="images/tickets/tickets-col-01.jpg" alt="">
+									<div class="tickets-col__label">
+										From
+										<strong>$25</strong>
+									</div>
+									<div class="tickets-col__btn">
+										<a href="#" class="tt-btn" data-toggle="modal" data-target="#modalBayTickets"><span>buy tickets</span></a>
+										<a href="#" class="tt-btn" data-toggle="modal" data-target="#modalVipTables"><span>VIP tables</span></a>
+									</div>
+								</div>
+								<div class="tickets-col__description">
+									<div class="tickets-col__data">Thursday, Jan 23, 2020</div>
+									<h3 class="tickets-col__title">Paradisco.</h3>
+									By Occupy The Disco
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class="tickets-col">
+								<div class="tickets-col__img">
+									<img src="images/tickets/tickets-col-02.jpg" alt="">
+									<div class="tickets-col__label">
+										From
+										<strong>$30</strong>
+									</div>
+									<div class="tickets-col__btn">
+										<a href="#" class="tt-btn" data-toggle="modal" data-target="#modalBayTickets"><span>buy tickets</span></a>
+										<a href="#" class="tt-btn" data-toggle="modal" data-target="#modalVipTables"><span>VIP tables</span></a>
+									</div>
+								</div>
+								<div class="tickets-col__description">
+									<div class="tickets-col__data">Tuesday, Jan 28, 2020</div>
+									<h3 class="tickets-col__title">Gustavo.</h3>
+									Outsource Steve Play
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class="tickets-col">
+								<div class="tickets-col__img">
+									<img src="images/tickets/tickets-col-03.jpg" alt="">
+									<div class="tickets-col__label">
+										From
+										<strong>$15</strong>
+									</div>
+									<div class="tickets-col__btn">
+										<a href="#" class="tt-btn" data-toggle="modal" data-target="#modalBayTickets"><span>buy tickets</span></a>
+										<a href="#" class="tt-btn" data-toggle="modal" data-target="#modalVipTables"><span>VIP tables</span></a>
+									</div>
+								</div>
+								<div class="tickets-col__description">
+									<div class="tickets-col__data">Thursday, Jan 30, 2020</div>
+									<h3 class="tickets-col__title">Friday Night. </h3>
+									Memoirs in Paradise
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class="tickets-col">
+								<div class="tickets-col__img">
+									<img src="images/tickets/tickets-col-04.jpg" alt="">
+									<div class="tickets-col__label">
+										From
+										<strong>$20</strong>
+									</div>
+									<div class="tickets-col__btn">
+										<a href="#" class="tt-btn" data-toggle="modal" data-target="#modalBayTickets"><span>buy tickets</span></a>
+										<a href="#" class="tt-btn" data-toggle="modal" data-target="#modalVipTables"><span>VIP tables</span></a>
+									</div>
+								</div>
+								<div class="tickets-col__description">
+									<div class="tickets-col__data">SUNDAY, Feb 2, 2020</div>
+									<h3 class="tickets-col__title">March Madness.</h3>
+									Travis Gold / Macho Iza
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class="tickets-col">
+								<div class="tickets-col__img">
+									<img src="images/tickets/tickets-col-05.jpg" alt="">
+									<div class="tickets-col__label">
+										From
+										<strong>$15</strong>
+									</div>
+									<div class="tickets-col__btn">
+										<a href="#" class="tt-btn" data-toggle="modal" data-target="#modalBayTickets"><span>buy tickets</span></a>
+										<a href="#" class="tt-btn" data-toggle="modal" data-target="#modalVipTables"><span>VIP tables</span></a>
+									</div>
+								</div>
+								<div class="tickets-col__description">
+									<div class="tickets-col__data">Wednesday, FEB 5, 2020</div>
+									<h3 class="tickets-col__title">Warm Up.</h3>
+									Get The Party Started
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class="tickets-col">
+								<div class="tickets-col__img">
+									<img src="images/tickets/tickets-col-06.jpg" alt="">
+									<div class="tickets-col__label">
+										From
+										<strong>$25</strong>
+									</div>
+									<div class="tickets-col__btn">
+										<a href="#" class="tt-btn" data-toggle="modal" data-target="#modalBayTickets"><span>buy tickets</span></a>
+										<a href="#" class="tt-btn" data-toggle="modal" data-target="#modalVipTables"><span>VIP tables</span></a>
+									</div>
+								</div>
+								<div class="tickets-col__description">
+									<div class="tickets-col__data">Wednesday, FEB 5, 2020</div>
+									<h3 class="tickets-col__title">Let’s Make Love</h3>
+									Desert Hearts presents
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="ttcalendar__month-title">March 2020</div>
+					<div class="row tickets-col-wrapper">
+						<div class="col-sm-6 col-md-4">
+							<div class="tickets-col">
+								<div class="tickets-col__img">
+									<img src="images/tickets/tickets-col-01.jpg" alt="">
+									<div class="tickets-col__label">
+										From
+										<strong>$25</strong>
+									</div>
+									<div class="tickets-col__btn">
+										<a href="#" class="tt-btn" data-toggle="modal" data-target="#modalBayTickets"><span>buy tickets</span></a>
+										<a href="#" class="tt-btn" data-toggle="modal" data-target="#modalVipTables"><span>VIP tables</span></a>
+									</div>
+								</div>
+								<div class="tickets-col__description">
+									<div class="tickets-col__data">Thursday, Jan 23, 2020</div>
+									<h3 class="tickets-col__title">Paradisco.</h3>
+									By Occupy The Disco
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class="tickets-col">
+								<div class="tickets-col__img">
+									<img src="images/tickets/tickets-col-02.jpg" alt="">
+									<div class="tickets-col__label">
+										From
+										<strong>$30</strong>
+									</div>
+									<div class="tickets-col__btn">
+										<a href="#" class="tt-btn" data-toggle="modal" data-target="#modalBayTickets"><span>buy tickets</span></a>
+										<a href="#" class="tt-btn" data-toggle="modal" data-target="#modalVipTables"><span>VIP tables</span></a>
+									</div>
+								</div>
+								<div class="tickets-col__description">
+									<div class="tickets-col__data">Tuesday, Jan 28, 2020</div>
+									<h3 class="tickets-col__title">Gustavo.</h3>
+									Outsource Steve Play
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class="tickets-col">
+								<div class="tickets-col__img">
+									<img src="images/tickets/tickets-col-03.jpg" alt="">
+									<div class="tickets-col__label">
+										From
+										<strong>$15</strong>
+									</div>
+									<div class="tickets-col__btn">
+										<a href="#" class="tt-btn" data-toggle="modal" data-target="#modalBayTickets"><span>buy tickets</span></a>
+										<a href="#" class="tt-btn" data-toggle="modal" data-target="#modalVipTables"><span>VIP tables</span></a>
+									</div>
+								</div>
+								<div class="tickets-col__description">
+									<div class="tickets-col__data">Thursday, Jan 30, 2020</div>
+									<h3 class="tickets-col__title">Friday Night. </h3>
+									Memoirs in Paradise
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class="tickets-col">
+								<div class="tickets-col__img">
+									<img src="images/tickets/tickets-col-04.jpg" alt="">
+									<div class="tickets-col__label">
+										From
+										<strong>$20</strong>
+									</div>
+									<div class="tickets-col__btn">
+										<a href="#" class="tt-btn" data-toggle="modal" data-target="#modalBayTickets"><span>buy tickets</span></a>
+										<a href="#" class="tt-btn" data-toggle="modal" data-target="#modalVipTables"><span>VIP tables</span></a>
+									</div>
+								</div>
+								<div class="tickets-col__description">
+									<div class="tickets-col__data">SUNDAY, Feb 2, 2020</div>
+									<h3 class="tickets-col__title">March Madness.</h3>
+									Travis Gold / Macho Iza
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class="tickets-col">
+								<div class="tickets-col__img">
+									<img src="images/tickets/tickets-col-05.jpg" alt="">
+									<div class="tickets-col__label">
+										From
+										<strong>$15</strong>
+									</div>
+									<div class="tickets-col__btn">
+										<a href="#" class="tt-btn" data-toggle="modal" data-target="#modalBayTickets"><span>buy tickets</span></a>
+										<a href="#" class="tt-btn" data-toggle="modal" data-target="#modalVipTables"><span>VIP tables</span></a>
+									</div>
+								</div>
+								<div class="tickets-col__description">
+									<div class="tickets-col__data">Wednesday, FEB 5, 2020</div>
+									<h3 class="tickets-col__title">Warm Up.</h3>
+									Get The Party Started
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class="tickets-col">
+								<div class="tickets-col__img">
+									<img src="images/tickets/tickets-col-06.jpg" alt="">
+									<div class="tickets-col__label">
+										From
+										<strong>$25</strong>
+									</div>
+									<div class="tickets-col__btn">
+										<a href="#" class="tt-btn" data-toggle="modal" data-target="#modalBayTickets"><span>buy tickets</span></a>
+										<a href="#" class="tt-btn" data-toggle="modal" data-target="#modalVipTables"><span>VIP tables</span></a>
+									</div>
+								</div>
+								<div class="tickets-col__description">
+									<div class="tickets-col__data">Wednesday, FEB 5, 2020</div>
+									<h3 class="tickets-col__title">Let’s Make Love</h3>
+									Desert Hearts presents
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+<footer id="tt-footer" class="no-margin">
+	@@include('includes/footer/footer-01.html')
+</footer>
+@@include('includes/include-js.html')
+@@include('includes/include-modal.html')
+@@include('includes/include-backtotop.html')
+</body>
+</html>
